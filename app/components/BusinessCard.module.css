@@ -1,0 +1,92 @@
+.card {
+  width: 100%;
+  max-width: 500px;
+  height: 700px;
+  perspective: 1000px;
+}
+
+.cardInner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .cardInner {
+  transform: rotateY(180deg);
+}
+
+.cardFront, .cardBack {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #8b0000, #4b0000); /* Gradiente rojo oscuro */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.cardFront {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardBack {
+  transform: rotateY(180deg);
+}
+
+.font-roboto-slab {
+  font-family: 'Roboto Slab', serif;
+}
+
+.profileImage {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.aboutMe {
+  text-align: left;
+  padding: 10px;
+  color: white;
+}
+
+.experienceItem {
+  margin-bottom: 10px;
+}
+
+.experienceTitle {
+  text-align: center;
+  font-weight: bold;
+  color:white;
+}
+
+.experienceDate {
+  text-align: center;
+  display: block;
+  font-size: 0.875em;
+  color: #ddd;
+}
+
+.technologies, .social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.tech-icon, .social-icon {
+  margin: 15px; /* Incrementar espaciado entre tecnologías y redes sociales */
+}
